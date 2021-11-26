@@ -15,8 +15,4 @@ public class MenuItem {
     @Id
     private String id;
     private String foodName;
-    private LocalDateTime orderedTime;
-    private LocalDateTime orderPreparedTime;
-    private LocalDateTime orderCancelledTime;
-    private Boolean itemReady;
 }

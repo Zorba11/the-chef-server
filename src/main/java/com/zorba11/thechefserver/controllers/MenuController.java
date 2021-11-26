@@ -10,13 +10,14 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/v1/menuitem")
+@CrossOrigin(origins = "http://localhost:3000")
 public class MenuController {
 
     @Autowired
     private MenuItemService menuItemService;
 
-    @GetMapping
-    public Optional<List<MenuItem>> fetchAllMenuItems() {
+    @GetMapping(produces="application/json")
+    public List<MenuItem> fetchAllMenuItems() {
         return menuItemService.fetchAllMenuItems();
     }
 

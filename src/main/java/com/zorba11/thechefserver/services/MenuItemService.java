@@ -17,8 +17,8 @@ public class MenuItemService {
     @Autowired
     private MenuItemsRepository menuItemsRepository;
 
-    public Optional<List<MenuItem>> fetchAllMenuItems() {
-        Optional<List<MenuItem>> items = Optional.ofNullable(menuItemsRepository.findAll());
+    public List<MenuItem> fetchAllMenuItems() {
+        List<MenuItem> items = menuItemsRepository.findAll();
         return items;
     }
 
